@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
 import Home from './Pages/Home';
-import About from './pages/About';
-import Service from './pages/Service';
-import Contact from './pages/Contact';
+import About from './Pages/About';
+import Service from './Pages/Service';
+import Contact from './Pages/Contact';
 
 
 // Components
