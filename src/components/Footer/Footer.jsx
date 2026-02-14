@@ -153,6 +153,14 @@ const Footer = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+    // { name: "Privacy Policy", path: "/privacy-policy" },
+  ];
+
   return (
     // <footer className="relative mt-20 bg-[#000b1a] text-slate-300 overflow-hidden">
     <footer className="relative bg-[#000b1a] text-slate-300 overflow-hidden">
@@ -220,23 +228,17 @@ const Footer = () => {
               {/* <span className="ml-2 w-8 h-[2px] bg-red-500" /> */}
             </h3>
             <ul className="space-y-4">
-              {[
-                "Home",
-                "About Us",
-                "Services",
-                "Contact",
-                "Privacy Policy",
-              ].map((item) => (
+              {links.map((item) => (
                 <li key={item}>
                   <Link
-                    to={`/${item.toLowerCase().replace(" ", "")}`}
+                    to={`${item.path}`}
                     className="flex items-center group text-slate-400 hover:text-white transition-colors"
                   >
                     <ArrowRight
                       size={14}
                       className="mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"
                     />
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -244,7 +246,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Contact Information */}
-          <motion.div variants={itemVariants} className="md:col-span-4">
+          {/* <motion.div variants={itemVariants} className="md:col-span-4">
             <h3 className="text-white font-semibold text-lg mb-6">
               Contact Hub
             </h3>
@@ -262,7 +264,7 @@ const Footer = () => {
 
               <div className="p-4 rounded-xl bg-slate-800/30 border border-slate-700/50 hover:border-red-500/50 transition-all group">
                 <a
-                  href="tel:+9190993065446"
+                  href="tel:+919093065446" 
                   className="flex items-center space-x-3"
                 >
                   <Phone
@@ -270,7 +272,10 @@ const Footer = () => {
                     size={20}
                   />
                   <span className="text-xl font-bold text-white">
-                    +91 90993 065446
+                    +91 90930 65446 
+                  </span>
+                  <span className="text-xl font-bold text-white">
+                    +91 86176 70860
                   </span>
                 </a>
               </div>
@@ -285,13 +290,71 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+          </motion.div> */}
+          {/* Contact Information */}
+          <motion.div variants={itemVariants} className="md:col-span-4">
+            <h3 className="text-white font-semibold text-lg mb-6">
+              Contact Hub
+            </h3>
+
+            <div className="space-y-6">
+              {/* Address */}
+              <div className="p-4 rounded-xl bg-slate-800/30 border border-slate-700/50 hover:bg-slate-800/50 transition-all duration-300">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="text-red-500 shrink-0 mt-1" size={20} />
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-white">
+                      Head Office
+                    </span>
+                    <span className="text-sm text-slate-400">
+                      CK84, SALT LAKE, SEC-2, Street line-2,
+                      <br />
+                      Kolkata, West Bengal - 700091
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Phone Numbers */}
+              <div className="p-4 rounded-xl bg-slate-800/30 border border-slate-700/50 hover:border-red-500/50 transition-all">
+                <div className="flex items-start space-x-3">
+                  <Phone className="text-red-500 mt-1" size={20} />
+                  <div className="flex flex-col space-y-2">
+                    <a
+                      href="tel:+919093065446"
+                      className="text-lg font-bold text-white hover:text-red-400 transition"
+                    >
+                      +91 90930 65446
+                    </a>
+
+                    <a
+                      href="tel:+918617670860"
+                      className="text-lg font-bold text-white hover:text-red-400 transition"
+                    >
+                      +91 86176 70860
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start space-x-3 px-4">
+                <Mail className="text-red-500 mt-1" size={18} />
+                <a
+                  href="mailto:debarabidas@gmail.com"
+                  className="text-sm hover:text-red-400 transition-colors"
+                >
+                  debarabidas@gmail.com
+                </a>
+              </div>
+            </div>
           </motion.div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-slate-800/60 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-500 text-xs tracking-widest uppercase text-center md:text-left">
-            © {new Date().getFullYear()} LifeLine Medical Services — Emergency
+            © {new Date().getFullYear()} CMDE Ambulance Services — Emergency
             Response Unit
           </p>
 

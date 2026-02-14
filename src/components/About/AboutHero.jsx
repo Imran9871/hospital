@@ -1,94 +1,3 @@
-
-
-// // src/components/AboutHero/AboutHero.jsx
-// import React, { useState, useEffect } from "react";
-
-// const AboutHero = () => {
-//   const messages = [
-//     "Who We Are",
-//     "What We Do",
-//     "Our Mission",
-//     "Why Choose Us"
-//   ];
-
-//   const [currentMessage, setCurrentMessage] = useState("");
-//   const [messageIndex, setMessageIndex] = useState(0);
-//   const [charIndex, setCharIndex] = useState(0);
-
-//   useEffect(() => {
-//     const typingSpeed = 100; // ms per character
-
-//     if (charIndex < messages[messageIndex].length) {
-//       const timeout = setTimeout(() => {
-//         setCurrentMessage((prev) => prev + messages[messageIndex][charIndex]);
-//         setCharIndex(charIndex + 1);
-//       }, typingSpeed);
-//       return () => clearTimeout(timeout);
-//     } else {
-//       // Wait and then erase
-//       const timeout = setTimeout(() => {
-//         setCurrentMessage("");
-//         setCharIndex(0);
-//         setMessageIndex((prev) => (prev + 1) % messages.length);
-//       }, 2000);
-//       return () => clearTimeout(timeout);
-//     }
-//   }, [charIndex, messageIndex, messages]);
-
-//   return (
-//     <section
-//       className="w-full flex items-center justify-center text-center text-white relative"
-//       style={{
-//         backgroundImage: `url("/HeroIMG1.jpeg")`, // Replace with About Us background
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         minHeight: "calc(80vh)", // Slightly smaller than full screen
-//       }}
-//     >
-//       {/* Dark overlay */}
-//       <div className="absolute inset-0 bg-black/60 z-0"></div>
-
-//       {/* Text content */}
-//       <div className="relative z-10 p-6 sm:p-12 rounded-md max-w-3xl mx-4">
-//         <h1 className="text-3xl sm:text-5xl font-bold mb-4">{currentMessage}</h1>
-//         <p className="text-md sm:text-xl text-gray-200">
-//           We are dedicated healthcare professionals providing fast, reliable, and compassionate ambulance services 24/7. Our mission is to save lives and ensure the highest quality medical care in every emergency.
-//         </p>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AboutHero;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 
 const AboutHero = () => {
@@ -129,7 +38,6 @@ const AboutHero = () => {
 
       {/* 3. CONTENT - Centered and spaced properly */}
       <div className="relative z-20 max-w-5xl px-6 text-center text-white flex flex-col items-center">
-        
         {/* Title Area */}
         <div className="mb-4">
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight uppercase drop-shadow-2xl">
@@ -140,13 +48,16 @@ const AboutHero = () => {
 
         {/* Description - Added bg-black/30 for readability over the busy image */}
         <p className="max-w-3xl text-lg sm:text-xl md:text-2xl font-light text-gray-100 leading-relaxed backdrop-blur-sm bg-black/20 p-4 rounded-xl">
-          We are dedicated healthcare professionals providing fast,
-          reliable, and compassionate ambulance services 24/7.
-          Our mission is to save lives and deliver quality care.
+          We are dedicated healthcare professionals providing fast, reliable,
+          and compassionate ambulance services 24/7. Our mission is to save
+          lives and deliver quality care.
         </p>
-        
+
         {/* Button */}
-        <button className="mt-8 px-10 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-lg rounded-md transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+        <button
+          className="mt-8 px-10 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-lg rounded-md transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(220,38,38,0.5)]"
+          onClick={() => window.location.href = "tel:+919093065446"}
+        >
           Contact Us Now
         </button>
       </div>

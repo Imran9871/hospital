@@ -131,7 +131,7 @@ const HeroService = () => {
         >
           <button
             onClick={() => {
-              window.location.href = "tel:+919099306544";
+              window.location.href = "tel:+919093065446";
             }}
             className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-red-900/20"
           >

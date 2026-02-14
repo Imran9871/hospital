@@ -234,7 +234,7 @@ const ImageSlider = () => {
                     style={{ backgroundColor: colors.primary.accent }}
                     className="px-8 py-4 rounded-full text-white font-bold text-lg shadow-xl hover:brightness-110 hover:scale-105 transition-all"
                   >
-                    <a href="tel:+919099306544" className="block">
+                    <a href="tel:+919093065446" className="block">
                       Contact Us Now
                     </a>
                   </button>
