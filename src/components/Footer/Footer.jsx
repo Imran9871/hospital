@@ -264,7 +264,7 @@ const Footer = () => {
 
               <div className="p-4 rounded-xl bg-slate-800/30 border border-slate-700/50 hover:border-red-500/50 transition-all group">
                 <a
-                  href="tel:+919093065446" 
+                  href="tel:+918910758266" 
                   className="flex items-center space-x-3"
                 >
                   <Phone
@@ -321,17 +321,19 @@ const Footer = () => {
                   <Phone className="text-red-500 mt-1" size={20} />
                   <div className="flex flex-col space-y-2">
                     <a
-                      href="tel:+919093065446"
+                      href="tel:+918910758266"
                       className="text-lg font-bold text-white hover:text-red-400 transition"
                     >
-                      +91 90930 65446
+                      {/* +91 90930 65446 89107 58266 */}
+                      +91 89107 58266
                     </a>
 
                     <a
-                      href="tel:+918617670860"
+                      href="tel:+919093065446"
                       className="text-lg font-bold text-white hover:text-red-400 transition"
                     >
-                      +91 86176 70860
+                      {/* +91 86176 70860 9093065446 */}
+                      +91 90930 65446
                     </a>
                   </div>
                 </div>

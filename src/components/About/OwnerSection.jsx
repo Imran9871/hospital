@@ -52,7 +52,7 @@ const OwnerSection = () => {
 
           <button
             className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition"
-            onClick={() => (window.location.href = "tel:+919093065446")}
+            onClick={() => (window.location.href = "tel:+918910758266")}
           >
             Contact Us
           </button>

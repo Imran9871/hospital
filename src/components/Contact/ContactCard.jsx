@@ -140,8 +140,10 @@ const ContactCard = ({ value, type, borderColor, delay }) => {
 /* Main Section */
 const ContactSection = () => {
   const contactData = [
-    { value: "+91 909 930 6544", color: "border-orange-500", type: "phone" },
-    { value: "+91 861 767 0860", color: "border-green-500", type: "phone" },
+    // { value: "+91 909 930 6544", color: "border-orange-500", type: "phone" },
+    { value: "+91 891 075 8266", color: "border-orange-500", type: "phone" },
+    { value: "+91 909 306 5446", color: "border-green-500", type: "phone" },
+    // { value: "+91 861 767 0860", color: "border-green-500", type: "phone" },
     { value: "debarabidas@gmail.com", color: "border-blue-500", type: "email" },
   ];
 

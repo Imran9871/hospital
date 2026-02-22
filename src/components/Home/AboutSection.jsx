@@ -161,7 +161,7 @@ const AboutSection = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => {
-          const phoneNumber = "919093065446"; // without +
+          const phoneNumber = "918910758266"; // without +
           const message = "I need an ambulance urgently.";
           const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
           window.open(url, "_blank");
@@ -173,7 +173,7 @@ const AboutSection = () => {
       {/* <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => (window.location.href = "tel:+919093065446")}
+        onClick={() => (window.location.href = "tel:+918910758266")}
         // className="fixed bottom-8 right-30 bg-red-600 p-4 rounded-full shadow-2xl hover:bg-red-700 transition-all z-50"
         className="fixed 
     bottom-8 
@@ -197,12 +197,12 @@ const AboutSection = () => {
                 md:right-8 
                 flex gap-4"
       >
-       {/* Phone Button */}
-<motion.button
-  whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.9 }}
-  onClick={() => (window.location.href = "tel:+919093065446")}
-  className="
+        {/* Phone Button */}
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => (window.location.href = "tel:+918910758266")}
+          className="
     fixed bottom-8 z-50
     left-4 md:left-auto
     md:right-30
@@ -210,30 +210,30 @@ const AboutSection = () => {
     shadow-2xl hover:bg-red-700
     transition-all
   "
->
-  <FaPhoneAlt className="w-7 h-7 text-white" />
-</motion.button>
+        >
+          <FaPhoneAlt className="w-7 h-7 text-white" />
+        </motion.button>
 
-{/* WhatsApp Button */}
-<motion.button
-  whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.9 }}
-  onClick={() => {
-    const phoneNumber = "919093065446";
-    const message = "I need an ambulance urgently.";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  }}
-  className="
+        {/* WhatsApp Button */}
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => {
+            const phoneNumber = "918910758266";
+            const message = "I need an ambulance urgently.";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+          }}
+          className="
     fixed bottom-8 z-50
     right-4 md:right-8
     bg-green-500 p-4 rounded-full
     shadow-2xl hover:bg-green-600
     transition-all
   "
->
-  <FaWhatsapp className="w-7 h-7 text-white" />
-</motion.button>
+        >
+          <FaWhatsapp className="w-7 h-7 text-white" />
+        </motion.button>
       </div>
     </section>
   );

@@ -16,19 +16,19 @@ const TopHeader = () => {
         <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4">
           <div className="flex flex-row gap-4">
             <a
+              href="tel:8910758266"
+              className="flex items-center gap-2 hover:underline"
+            >
+              <FaPhoneAlt className="text-s" />
+              8910758266
+            </a>
+
+            <a
               href="tel:9093065446"
               className="flex items-center gap-2 hover:underline"
             >
               <FaPhoneAlt className="text-s" />
               9093065446
-            </a>
-
-            <a
-              href="tel:8617670860"
-              className="flex items-center gap-2 hover:underline"
-            >
-              <FaPhoneAlt className="text-s" />
-              8617670860
             </a>
           </div>
 

@@ -56,7 +56,7 @@ const AboutHero = () => {
         {/* Button */}
         <button
           className="mt-8 px-10 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-lg rounded-md transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(220,38,38,0.5)]"
-          onClick={() => window.location.href = "tel:+919093065446"}
+          onClick={() => (window.location.href = "tel:+918910758266")}
         >
           Contact Us Now
         </button>

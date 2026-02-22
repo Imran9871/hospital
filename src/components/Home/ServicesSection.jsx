@@ -82,6 +82,14 @@ const ServicesSection = () => {
         "Reliable patient transport for safe and timely hospital transfers, equipped with essential life support systems.",
       image1: "/HeroIMG2.jpeg",
       image2: "/HeroIMG6.jpeg",
+      features: [
+        "24/7 Rapid Response",
+        "Basic Life Support",
+        "Certified Paramedics",
+        "Safe Hospital Transfer",
+      ],
+      buttonText: "Book Ambulance",
+      whatsappMessage: "I need an ambulance urgently.",
     },
     "ICU Ambulance": {
       title: "Mobile ICU Unit",
@@ -89,6 +97,14 @@ const ServicesSection = () => {
         "Advanced critical care on wheels. Equipped with ventilators, monitors, and specialized paramedics for high-risk transport.",
       image1: "/SERVICE.jpeg",
       image2: "HeroIMG5.jpeg",
+      features: [
+        "Ventilator Support",
+        "ICU Setup",
+        "Critical Care Team",
+        "Emergency Ready",
+      ],
+      buttonText: "Book ICU Ambulance",
+      whatsappMessage: "I need ICU ambulance urgently.",
     },
     "Medical Support": {
       title: "Event Support",
@@ -97,6 +113,14 @@ const ServicesSection = () => {
       image1:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop",
       image2: "TRUST.jpeg",
+      features: [
+        "On-Site Ambulance",
+        "Certified Medical Staff",
+        "Emergency Response Ready",
+        "Suitable for All Events",
+      ],
+      buttonText: "Book Medical Support",
+      whatsappMessage: "I need medical support for an event.",
     },
     "Patient Transfer": {
       title: "Safe Transfer",
@@ -104,6 +128,29 @@ const ServicesSection = () => {
         "Bed-to-bed transfer services focusing on patient comfort and stability during inter-city or inter-hospital moves.",
       image1: "/Hero.jpg",
       image2: "/unnamed.jpg",
+      features: [
+        "Bed to Bed Transfer",
+        "Comfortable Journey",
+        "Experienced Staff",
+        "Available 24/7",
+      ],
+      buttonText: "Book Transfer",
+      whatsappMessage: "I need patient transfer service.",
+    },
+    "Dead Body Freezer": {
+      title: "Dead Body Freezer Box (Home Service)",
+      description:
+        "We provide dead body freezer box on rent with home delivery. Maintains proper cooling to preserve the body safely for last rites. Available 24/7 with quick setup and support.",
+      image1: "/freezer1.jpeg", // upload your first image in public folder
+      image2: "/freezer2.jpeg", // upload second image
+      features: [
+        "24/7 Home Delivery",
+        "Temperature Control",
+        "Hygienic & Sanitized",
+        "Quick Installation",
+      ],
+      buttonText: "Book Freezer",
+      whatsappMessage: "I need dead body freezer box on rent.",
     },
   };
 
@@ -184,12 +231,13 @@ const ServicesSection = () => {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
+                {/* {[
                   "24/7 Rapid Response",
                   "ICU Equipment",
                   "Certified Paramedics",
                   "Global Standards",
-                ].map((item, i) => (
+                ].map((item, i) => ( */}
+                {services[activeTab].features.map((item, i) => (
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -214,14 +262,16 @@ const ServicesSection = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
-                  const phoneNumber = "919093065446"; // without +
-                  const message = "I need an ambulance urgently.";
+                  const phoneNumber = "918910758266"; // without +
+                  // const message = "I need an ambulance urgently.";
+                  const message = services[activeTab].whatsappMessage;
                   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                   window.open(url, "_blank");
                 }}
                 className="bg-red-600 text-white px-12 py-5 rounded-2xl font-black text-lg hover:bg-red-700 transition-all flex items-center gap-3 shadow-xl"
               >
-                Book Ambulance <MessageCircle className="w-5 h-5" />
+                {/* Book Ambulance <MessageCircle className="w-5 h-5" /> */}
+                {services[activeTab].buttonText} <MessageCircle className="w-5 h-5" />
               </motion.button>
             </motion.div>
 
